@@ -72,7 +72,7 @@ WHERE CategoryID = 5;
 
 -- ******************************************************************************
 -- 1
-SELEcT ListPrice,
+SELECT ListPrice,
 	CAST(ListPrice AS decimal(18, 1)) AS PriceFormat,
 	CONVERT(int, ListPrice) AS PriceConvert,
 	CAST(ListPrice AS int) AS PriceCast
@@ -80,8 +80,8 @@ FROM Products;
 
 -- 2
 SELECT  DateAdded,
-	FORMAT(CAST(DateAdded as date), 'MM/dd/yyyy') AS AddedDate,
+	FORMAT(CAST(DateAdded AS date), 'mm/dd/yyyy') AS AddedDate,
 	CAST(DateAdded AS time(0)) AS AddedTime,
-	FORMAT(CAST(DateAdded as date), 'M') AS AddedChar7
+	FORMAT(CAST(DateAdded AS date), 'M') AS AddedChar
 FROM Products;
 
